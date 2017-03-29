@@ -2,32 +2,33 @@ backend:
   name: github
   repo: mhsfalcons97/mhs9720dev # Path to your Github repository
   branch: master # Branch to update
-  publish_mode: editorial_workflow
-  media_folder: "static/img/uploads" # Media files will be stored in the repo under images/uploads
-  public_folder: "/img/uploads" # The src attribute for uploaded media will begin with /images/uploads
+  
+publish_mode: editorial_workflow
+media_folder: "static/img/uploads" # Media files will be stored in the repo under images/uploads
+public_folder: "/img/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
-  collections:
-    - name: "blog" # Used in routes, e.g. /admin/collections/blog
-      label: "Blog" # Used in the UI
-      folder: "/content/blog" # The path to the folder where the documents are stored
-      create: true # Allow users to create new documents in this collection
-      slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template i.e. YYYY-MM-DD-title.md
-      fields: # The fields for each document, usually in front matter
-        - {label: "Title", name: "title", widget: "string"}
-        - {label: "Publish Date", name: "date", widget: "datetime"}
-        - {label: "Type", name: "type", widget: "string"} #post
-        - {label: Author, name: author, widget: string}
-        - {label: Description, name: description, widget: string}
-        - {label: "Featured Image", name: "featured", widget: "image"}
-        - {label: "Link Title", name: "linktitle", widget: "string"} #if path is title then it will use the LinkTitle from the Page variable
-        - {label: "Image URL Key", name: "featuredpath", widget: "string"} #date or title
-        - {label: "Image Alt Text", name: "featuredalt", widget: "string"}
-        - {label: "Body", name: "body", widget: "markdown"}
-    - name: "pages" # Used in routes, e.g. /admin/collections/blog
-      label: "Pages" # Used in the UI
-      folder: "/content" # The path to the folder where the documents are stored
-      create: true # Allow users to create new documents in this collection
-      slug: "{{slug}}" # Filename template i.e. YYYY-MM-DD-title.md
-      fields: # The fields for each document, usually in front matter
-        - {label: "Title", name: "title", widget: "string"}
-        - {label: "Body", name: "body", widget: "markdown"}
+collections:
+  - name: "blog" # Used in routes, e.g. /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "/content/blog" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template i.e. YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Type", name: "type", widget: "string"} #post
+      - {label: Author, name: author, widget: string}
+      - {label: Description, name: description, widget: string}
+      - {label: "Featured Image", name: "featured", widget: "image"}
+      - {label: "Link Title", name: "linktitle", widget: "string"} #if path is title then it will use the LinkTitle from the Page variable
+      - {label: "Image URL Key", name: "featuredpath", widget: "string"} #date or title
+      - {label: "Image Alt Text", name: "featuredalt", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "pages" # Used in routes, e.g. /admin/collections/blog
+    label: "Pages" # Used in the UI
+    folder: "/content" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template i.e. YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
