@@ -14,11 +14,7 @@
 
 {{ if eq $path "title" }}
     {{ $.Scratch.Set "path" "" }}
-    {{ if eq $structType "shortcode" }}
-        {{ $.Scratch.Add "path" (lower (replace .Page.LinkTitle " " "-")) }}
-    {{ else }}
-        {{ $.Scratch.Add "path" (lower (replace .LinkTitle " " "-")) }}
-    {{ end }}
+    
 {{ else if eq $path "date" }}
     {{ $.Scratch.Set "path" "/img/" }}
     {{ if eq $structType "shortcode" }}
