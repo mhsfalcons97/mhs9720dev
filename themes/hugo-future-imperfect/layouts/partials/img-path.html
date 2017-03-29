@@ -13,7 +13,7 @@
 {{ $structType := $.Scratch.Get "structType" }}
 
 {{ if eq $path "title" }}
-    {{ $.Scratch.Set "path" "/img/" }}
+    {{ $.Scratch.Set "path" "" }}
     {{ if eq $structType "shortcode" }}
         {{ $.Scratch.Add "path" (lower (replace .Page.LinkTitle " " "-")) }}
     {{ else }}
