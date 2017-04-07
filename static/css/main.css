@@ -1726,7 +1726,7 @@
 		text-transform: uppercase;
 		white-space: nowrap;
 	}
-	.c-button {
+	.c-button,.cognito .c-forms-form button {
 		color: #fff !important;
 	}
 		input[type="submit"]:hover,
