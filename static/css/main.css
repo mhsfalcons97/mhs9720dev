@@ -1726,7 +1726,9 @@
 		text-transform: uppercase;
 		white-space: nowrap;
 	}
-
+	.c-button {
+		color: #fff !important;
+	}
 		input[type="submit"]:hover,
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
